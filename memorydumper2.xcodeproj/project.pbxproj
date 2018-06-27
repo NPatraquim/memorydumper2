@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08B2241820CD58B500C7929F /* GraphFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B2241720CD58B500C7929F /* GraphFiles.swift */; };
 		C200F1721D2C84ED0005F1CA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C200F1711D2C84ED0005F1CA /* main.swift */; };
 		C23E99B51D72750F00D0E8DC /* CMemory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C23E99B31D72750F00D0E8DC /* CMemory.cpp */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		08B2241720CD58B500C7929F /* GraphFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphFiles.swift; sourceTree = "<group>"; };
 		C200F16E1D2C84ED0005F1CA /* memorydumper2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = memorydumper2; sourceTree = BUILT_PRODUCTS_DIR; };
 		C200F1711D2C84ED0005F1CA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C23E99B21D72750F00D0E8DC /* memorydumper2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "memorydumper2-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				C200F1711D2C84ED0005F1CA /* main.swift */,
+				08B2241720CD58B500C7929F /* GraphFiles.swift */,
 				C23E99B41D72750F00D0E8DC /* CMemory.h */,
 				C23E99B31D72750F00D0E8DC /* CMemory.cpp */,
 				C23E99B21D72750F00D0E8DC /* memorydumper2-Bridging-Header.h */,
@@ -132,6 +135,7 @@
 			files = (
 				C23E99B51D72750F00D0E8DC /* CMemory.cpp in Sources */,
 				C200F1721D2C84ED0005F1CA /* main.swift in Sources */,
+				08B2241820CD58B500C7929F /* GraphFiles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
