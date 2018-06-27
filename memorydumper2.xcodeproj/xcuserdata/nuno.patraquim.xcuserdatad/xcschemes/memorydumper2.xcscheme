@@ -67,7 +67,11 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "shouldConvertFiles:false"
+            argument = "path:/Users/nuno.patraquim/Desktop/"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "shouldConvertFiles:true"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument

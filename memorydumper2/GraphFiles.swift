@@ -16,7 +16,6 @@ struct GraphFiles {
 
         static let defaultPath = "/tmp/"
         static let defaultFileExtension = "pdf"
-        static let defaultShellLocation = "/usr/local/bin/dot"
     }
 
     let path: String
@@ -102,13 +101,14 @@ extension GraphFiles {
 
     static func export(filename: String) {
 
-        guard self.sharedInstance().shouldConvertFiles else {
+        guard self.sharedInstance().shouldConvertFiles,
+            let dotShellLocation = self.sharedInstance().dotShellLocation else {
 
             return
         }
 
         let task = Process()
-        task.launchPath = self.sharedInstance().dotShellLocation
+        task.launchPath = dotShellLocation
         task.arguments = commandToRun(for: filename)
         task.launch()
     }

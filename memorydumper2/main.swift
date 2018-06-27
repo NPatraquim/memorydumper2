@@ -426,27 +426,27 @@ protocol P {
 }
 
 struct EmptyStruct {}
-//dumpAndOpenGraph(dumping: EmptyStruct(), maxDepth: 60, filename: "Empty struct")
+dumpAndOpenGraph(dumping: EmptyStruct(), maxDepth: 60, filename: "Empty struct")
 
 class EmptyClass {}
-//dumpAndOpenGraph(dumping: EmptyClass(), maxDepth: 60, filename: "Empty class")
+dumpAndOpenGraph(dumping: EmptyClass(), maxDepth: 60, filename: "Empty class")
 
 class EmptyObjCClass: NSObject {}
-//dumpAndOpenGraph(dumping: EmptyObjCClass(), maxDepth: 60, filename: "Empty ObjC Class")
+dumpAndOpenGraph(dumping: EmptyObjCClass(), maxDepth: 60, filename: "Empty ObjC Class")
 
 struct SimpleStruct {
     var x: Int = 1
     var y: Int = 2
     var z: Int = 3
 }
-//dumpAndOpenGraph(dumping: SimpleStruct(), maxDepth: 60, filename: "Simple struct")
+dumpAndOpenGraph(dumping: SimpleStruct(), maxDepth: 60, filename: "Simple struct")
 
 class SimpleClass {
     var x: Int = 1
     var y: Int = 2
     var z: Int = 3
 }
-//dumpAndOpenGraph(dumping: SimpleClass(), maxDepth: 6, filename: "Simple class")
+dumpAndOpenGraph(dumping: SimpleClass(), maxDepth: 6, filename: "Simple class")
 
 struct StructWithPadding {
     var a: UInt8 = 1
@@ -458,7 +458,7 @@ struct StructWithPadding {
     var g: UInt8 = 7
     var h: UInt64 = 8
 }
-//dumpAndOpenGraph(dumping: StructWithPadding(), maxDepth: 60, filename: "Struct with padding")
+dumpAndOpenGraph(dumping: StructWithPadding(), maxDepth: 60, filename: "Struct with padding")
 
 class ClassWithPadding {
     var a: UInt8 = 1
@@ -470,7 +470,7 @@ class ClassWithPadding {
     var g: UInt8 = 7
     var h: UInt64 = 8
 }
-//dumpAndOpenGraph(dumping: ClassWithPadding(), maxDepth: 60, filename: "Class with padding")
+dumpAndOpenGraph(dumping: ClassWithPadding(), maxDepth: 60, filename: "Class with padding")
 
 class DeepClassSuper1 {
     var a = 1
@@ -484,9 +484,9 @@ class DeepClassSuper3: DeepClassSuper2 {
 class DeepClass: DeepClassSuper3 {
     var d = 4
 }
-//dumpAndOpenGraph(dumping: DeepClass(), maxDepth: 60, filename: "Deep class")
+dumpAndOpenGraph(dumping: DeepClass(), maxDepth: 60, filename: "Deep class")
 
-//dumpAndOpenGraph(dumping: [1, 2, 3, 4, 5], maxDepth: 4, filename: "Integer array")
+dumpAndOpenGraph(dumping: [1, 2, 3, 4, 5], maxDepth: 4, filename: "Integer array")
 
 struct StructSmallP: P {
     func f() {}
@@ -518,7 +518,7 @@ struct ProtocolHolder {
     var c: P
 }
 let holder = ProtocolHolder(a: StructSmallP(), b: StructBigP(), c: ClassP())
-//dumpAndOpenGraph(dumping: holder, maxDepth: 4, filename: "Protocol types")
+dumpAndOpenGraph(dumping: holder, maxDepth: 4, filename: "Protocol types")
 
 enum SimpleEnum {
     case A, B, C, D, E
@@ -530,7 +530,7 @@ struct SimpleEnumHolder {
     var d: SimpleEnum
     var e: SimpleEnum
 }
-//dumpAndOpenGraph(dumping: SimpleEnumHolder(a: .A, b: .B, c: .C, d: .D, e: .E), maxDepth: 5, filename: "Simple enum")
+dumpAndOpenGraph(dumping: SimpleEnumHolder(a: .A, b: .B, c: .C, d: .D, e: .E), maxDepth: 5, filename: "Simple enum")
 
 enum IntRawValueEnum: Int {
     case A = 1, B, C, D, E
@@ -542,7 +542,7 @@ struct IntRawValueEnumHolder {
     var d: IntRawValueEnum
     var e: IntRawValueEnum
 }
-//dumpAndOpenGraph(dumping: IntRawValueEnumHolder(a: .A, b: .B, c: .C, d: .D, e: .E), maxDepth: 5, filename: "Int raw value enum")
+dumpAndOpenGraph(dumping: IntRawValueEnumHolder(a: .A, b: .B, c: .C, d: .D, e: .E), maxDepth: 5, filename: "Int raw value enum")
 
 enum StringRawValueEnum: String {
     case A = "whatever", B, C, D, E
@@ -554,7 +554,7 @@ struct StringRawValueEnumHolder {
     var d: StringRawValueEnum
     var e: StringRawValueEnum
 }
-//dumpAndOpenGraph(dumping: StringRawValueEnumHolder(a: .A, b: .B, c: .C, d: .D, e: .E), maxDepth: 5, filename: "String raw value enum")
+dumpAndOpenGraph(dumping: StringRawValueEnumHolder(a: .A, b: .B, c: .C, d: .D, e: .E), maxDepth: 5, filename: "String raw value enum")
 
 enum OneAssociatedObjectEnum {
     case A(AnyObject)
